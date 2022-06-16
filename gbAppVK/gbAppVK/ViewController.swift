@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         if loginField.hasText {
             print(loginField.text!)
         }
+
 }
 
 }
