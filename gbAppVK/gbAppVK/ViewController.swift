@@ -21,10 +21,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: Any) {
-        print(#function)
-        if loginField.hasText {
-            print(loginField.text!)
+        guard loginField.text == "",
+              passwordField.text == "" else{
+            return
         }
+        performSegue(withIdentifier: "tabBarCollection", sender: nil)
     }
 }
 
