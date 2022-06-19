@@ -23,6 +23,10 @@ class ViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
         guard loginField.text == "",
               passwordField.text == "" else{
+            let alert = UIAlertController(title: "Ошибка", message: "Введены неверные данные пользователя", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
             return
         }
         performSegue(withIdentifier: "tabBarCollection", sender: nil)
