@@ -21,6 +21,8 @@
 		3D8EF470285A51D600A27665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8EF46E285A51D600A27665 /* LaunchScreen.storyboard */; };
 		3DAC2F482869BC6E004B7ED8 /* AvailableGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC2F472869BC6E004B7ED8 /* AvailableGroupsTableViewController.swift */; };
 		3DAC2F4A2869C34D004B7ED8 /* AvailableGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC2F492869C34D004B7ED8 /* AvailableGroupsTableViewCell.swift */; };
+		3DAC2F4C2869CF8A004B7ED8 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC2F4B2869CF8A004B7ED8 /* AvatarCell.swift */; };
+		3DAC2F4E2869D127004B7ED8 /* AvatarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC2F4D2869D127004B7ED8 /* AvatarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		3D8EF471285A51D600A27665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DAC2F472869BC6E004B7ED8 /* AvailableGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupsTableViewController.swift; sourceTree = "<group>"; };
 		3DAC2F492869C34D004B7ED8 /* AvailableGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupsTableViewCell.swift; sourceTree = "<group>"; };
+		3DAC2F4B2869CF8A004B7ED8 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		3DAC2F4D2869D127004B7ED8 /* AvatarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				3D4EE9EA2868C71900B11F7F /* Model */,
 				3D4EE9EF2868C9D600B11F7F /* FriendsTableViewController.swift */,
 				3D4EE9F72868D27800B11F7F /* FriendsTableViewCell.swift */,
+				3DAC2F4B2869CF8A004B7ED8 /* AvatarCell.swift */,
+				3DAC2F4D2869D127004B7ED8 /* AvatarController.swift */,
 				3D4EE9F52868CCCA00B11F7F /* GroupsTableViewController.swift */,
 				3DAC2F472869BC6E004B7ED8 /* AvailableGroupsTableViewController.swift */,
 				3DAC2F492869C34D004B7ED8 /* AvailableGroupsTableViewCell.swift */,
@@ -174,12 +180,14 @@
 				3D4EE9F02868C9D600B11F7F /* FriendsTableViewController.swift in Sources */,
 				3DAC2F4A2869C34D004B7ED8 /* AvailableGroupsTableViewCell.swift in Sources */,
 				3D8EF464285A51D300A27665 /* AppDelegate.swift in Sources */,
+				3DAC2F4E2869D127004B7ED8 /* AvatarController.swift in Sources */,
 				3DAC2F482869BC6E004B7ED8 /* AvailableGroupsTableViewController.swift in Sources */,
 				3D4EE9F82868D27800B11F7F /* FriendsTableViewCell.swift in Sources */,
 				3D4EE9FA28690BEB00B11F7F /* GroupsTableViewCell.swift in Sources */,
 				3D4EE9F42868CB7900B11F7F /* Group.swift in Sources */,
 				3D4EE9F62868CCCA00B11F7F /* GroupsTableViewController.swift in Sources */,
 				3D8EF466285A51D300A27665 /* SceneDelegate.swift in Sources */,
+				3DAC2F4C2869CF8A004B7ED8 /* AvatarCell.swift in Sources */,
 				3D4EE9F22868CB6000B11F7F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
