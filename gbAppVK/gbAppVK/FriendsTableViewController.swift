@@ -17,7 +17,6 @@ class FriendsTableViewController: UITableViewController {
         User(name: "Елизавета", avatar: UIImage(named: "elizaveta")),
         User(name: "Олег", avatar: UIImage(named: "oleg")),
         User(name: "Вова", avatar: UIImage(named: "vova")),
-        
     ]
 
     override func viewDidLoad() {
@@ -33,24 +32,29 @@ class FriendsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return friends.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as? FriendsTableViewCell else{
+            preconditionFailure("Error")
+        }
 
-        // Configure the cell...
+        cell.friendName.text = friends[indexPath.row].name
+        if friends[indexPath.row].avatar != nil {
+            cell.friendAvatar.image = friends[indexPath.row].avatar
+        } else {
+            cell.friendAvatar.image = UIImage(named: "friendPlaceholder")
+        }
+        cell.friendAvatar.layer.cornerRadius = 25
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

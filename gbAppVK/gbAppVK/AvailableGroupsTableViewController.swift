@@ -1,22 +1,21 @@
 //
-//  GroupsTableViewController.swift
+//  AvailableGroupsTableViewController.swift
 //  gbAppVK
 //
-//  Created by Артем Седов on 26.06.2022.
+//  Created by Артем Седов on 27.06.2022.
 //
 
 import UIKit
 
-class GroupsTableViewController: UITableViewController {
-
-    var groups = [
-        Group(name: "MDK", avatar: UIImage(named: "mdk")),
-        Group(name: "Лентач", avatar: UIImage(named: "lentach")),
-        Group(name: "Новости СПб", avatar: UIImage(named: "spbcp")),
-        Group(name: "/dev/null", avatar: UIImage(named: "devnull")),
-        Group(name: "Дезигн", avatar: UIImage(named: "design")),
-        Group(name: "Хабр", avatar: UIImage(named: "habr")),
+class AvailableGroupsTableViewController: UITableViewController {
+    
+    var availableGroups = [
+    Group(name: "AcademeG", avatar: nil),
+    Group(name: "РБК", avatar: nil),
+    Group(name: "Ленинград", avatar: nil)
     ]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,25 +29,27 @@ class GroupsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return groups.count
+        return availableGroups.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath) as? GroupsTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AvailableGroupsTableViewCell", for: indexPath) as? AvailableGroupsTableViewCell else{
             preconditionFailure("Error")
         }
 
-        cell.groupName.text = groups[indexPath.row].name
-        if groups[indexPath.row].avatar != nil {
-            cell.groupAvatar.image = groups[indexPath.row].avatar
+        cell.avGroupName.text = availableGroups[indexPath.row].name
+        
+        if availableGroups[indexPath.row].avatar != nil {
+            cell.avGroupImage.image = availableGroups[indexPath.row].avatar
         } else {
-            cell.groupAvatar.image = UIImage(named: "groupPlaceholder")
+            cell.avGroupImage.image = UIImage(named: "groupPlaceholder")
         }
 
         return cell
