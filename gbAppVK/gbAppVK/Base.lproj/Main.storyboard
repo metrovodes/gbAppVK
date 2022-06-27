@@ -138,6 +138,7 @@
                                 <connections>
                                     <outlet property="friendAvatar" destination="8PH-Dz-lbD" id="0z5-CK-dti"/>
                                     <outlet property="friendName" destination="J2f-DJ-AsZ" id="5Af-rD-N4X"/>
+                                    <segue destination="ike-cb-2z3" kind="show" id="lKP-gb-02E"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -147,57 +148,43 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Друзья" id="hOa-ef-ETq"/>
-                    <connections>
-                        <segue destination="nAm-81-NSt" kind="presentation" modalPresentationStyle="fullScreen" id="S8k-XG-sy6"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ic-Uf-pPQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3553.6231884057975" y="-309.375"/>
         </scene>
         <!--Collection View Controller-->
-        <scene sceneID="g2h-rF-HC9">
+        <scene sceneID="msa-gm-bmP">
             <objects>
-                <collectionViewController id="nAm-81-NSt" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="GGE-5m-z7A">
+                <collectionViewController id="ike-cb-2z3" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Wy4-b1-Rq6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Rs-h3-ZjW">
-                            <size key="itemSize" width="414" height="811"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fhA-X6-O5n">
+                            <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="STs-DJ-p5A">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="811"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="n32-kd-VTq">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Y6H-0B-9rP">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="811"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gir-8h-t0A">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="liR-X9-5cb">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="811"/>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="liR-X9-5cb" firstAttribute="top" secondItem="Y6H-0B-9rP" secondAttribute="top" id="0cg-U3-qzR"/>
-                                        <constraint firstAttribute="trailing" secondItem="liR-X9-5cb" secondAttribute="trailing" id="Gc1-GW-v6V"/>
-                                        <constraint firstItem="liR-X9-5cb" firstAttribute="leading" secondItem="Y6H-0B-9rP" secondAttribute="leading" id="c09-DY-tAR"/>
-                                        <constraint firstAttribute="bottom" secondItem="liR-X9-5cb" secondAttribute="bottom" id="eLD-Xm-nco"/>
-                                    </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="414" height="811"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="nAm-81-NSt" id="7gb-B2-XcC"/>
-                            <outlet property="delegate" destination="nAm-81-NSt" id="Ep7-Pi-oYO"/>
+                            <outlet property="dataSource" destination="ike-cb-2z3" id="o78-db-bnv"/>
+                            <outlet property="delegate" destination="ike-cb-2z3" id="TEG-W6-fbA"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="Ek9-69-iZA"/>
                 </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F0T-su-EeA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTl-vA-ThX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4493" y="-309"/>
         </scene>
@@ -206,7 +193,7 @@
             <objects>
                 <navigationController id="2yM-bo-rr0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Друзья" image="person.3.sequence" catalog="system" selectedImage="person.3.sequence" id="Jyr-99-kIW"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="6UC-pZ-HrC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6UC-pZ-HrC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="standardAppearance"/>
@@ -363,6 +350,7 @@
                                 <connections>
                                     <outlet property="avGroupImage" destination="C4j-hR-zCS" id="6sk-gL-Oyt"/>
                                     <outlet property="avGroupName" destination="4xn-Ub-Wzp" id="bgH-9s-9RC"/>
+                                    <segue destination="wuW-yX-FNs" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="OUU-L8-wgS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -374,6 +362,7 @@
                     <navigationItem key="navigationItem" title="Поиск" id="BOP-Nj-R52"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1IT-fE-eNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="wuW-yX-FNs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4493" y="642"/>
         </scene>

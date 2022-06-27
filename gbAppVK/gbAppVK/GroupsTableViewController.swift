@@ -17,6 +17,18 @@ class GroupsTableViewController: UITableViewController {
         Group(name: "Дезигн", avatar: UIImage(named: "design")),
         Group(name: "Хабр", avatar: UIImage(named: "habr")),
     ]
+    
+    @IBAction func addGroup(segue: UIStoryboardSegue) {
+        if segue.identifier == "addGroup" {
+            let AvailableGroupsController = segue.source as! AvailableGroupsTableViewController
+            if let indexPath = AvailableGroupsController.tableView.indexPathForSelectedRow {
+                let group = AvailableGroupsController.availableGroups[indexPath.row]
+                groups.append(group)
+                tableView.reloadData()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,17 +75,17 @@ class GroupsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            groups.remove(at: indexPath.row)
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
     /*
     // Override to support rearranging the table view.
