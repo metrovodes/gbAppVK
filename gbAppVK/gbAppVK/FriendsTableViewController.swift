@@ -18,6 +18,7 @@ class FriendsTableViewController: UITableViewController {
         User(name: "Олег", avatar: UIImage(named: "oleg")),
         User(name: "Вова", avatar: UIImage(named: "vova")),
     ]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,15 @@ class FriendsTableViewController: UITableViewController {
         cell.friendAvatar.layer.cornerRadius = 25
 
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAvatar",
+           let destinationVC = segue.destination as? AvatarController,
+           let indexPath = tableView.indexPathForSelectedRow{
+            destinationVC.title = friends[indexPath.row].name
+            destinationVC.avatarImage = friends[indexPath.row].avatar
+        }
     }
 
     /*

@@ -9,6 +9,8 @@ import UIKit
 
 class AvatarController: UICollectionViewController {
     
+    var avatarImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,8 +47,12 @@ class AvatarController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AvatarCell", for: indexPath) as! AvatarCell
-    
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AvatarCell", for: indexPath) as? AvatarCell else{
+            preconditionFailure("Error")
+        }
+        
+        cell.avatarImage.image = avatarImage ?? UIImage(named: "friendPlaceholder")
+        
         return cell
     }
 
